@@ -1,0 +1,193 @@
+# DoctorBio Intent
+---
+type: intent
+name: DoctorBio
+slots:
+   - name: Doctorbio
+     entity: ENT_DoctorBioVal
+   - name: doctor_name
+     entity: ENT_doctor_name
+utterances:
+   - What is the [Doctorbio](biography) of [doctor_name](safwat hamad) ?
+   - Who is [doctor_name]
+   - Tell me more about [doctor_name]
+   - i want to know [Doctorbio] of [doctor_name]
+
+# Grading Schema Intent
+---
+type: intent
+name: GradingFormat
+slots:
+   - name: GradingSchema
+     entity: ENT_GradingSchemaVal
+   - name: Dep
+     entity: ENT_Departemenet
+utterances:
+   - What is the [GradingSchema](grading schema) of [Dep](software engineering) ?
+   - tell me the [GradingSchema] of [Dep](software engineering) ?
+   - i want to know the [GradingSchema] of [Dep](software engineering)
+
+# Office location Intent
+---
+type: intent
+name: DoctorOffice
+slots:
+   - name: office
+     entity: ENT_OfficeVal
+   - name: doc
+     entity: ENT_doctor_name
+utterances:
+   - where is [doc](safwat hamad) 's [office](personal office) ?
+   - how to go to [doc] 's [office] ?
+   - tell me the way to [doc]'s [office]
+   - i want to know the place of [doc]'s [office]
+
+
+# OfficeHours Intent
+---
+type: intent
+name: OfficeHours
+slots:
+   - name: officehours
+     entity: ENTOfficeHoursVal
+   - name: doc
+     entity: ENT_doctor_name
+utterances:
+   - what are the [officehours](office hours) of [doc](safwat hamad)?
+   - i want to know the [officehours] of [doc]
+   - when is [doc](safwat hamad) [officehours] ?
+   - tell me the [officehours] of [doc]
+
+# ReqResultTime Intent
+---
+type: intent
+name: ReqResultTime
+slots:
+   - name: Dep
+     entity: ENT_Department
+   - name: result
+     entity: ENT_ResultVal
+   - name: year
+     entity: ENT_Year
+utterances:
+   - when is the [Dep](sw) [result] for [year](year one) ?
+   - i want to know the time of [Dep](sw) [result] for [year]
+   - what is the time for showing the [result] for [Dep] for [year]
+
+
+# ReqPayment Intent
+---
+type: intent
+name: ReqPayment
+slots:
+   - name: Fees
+     entity: ENT_ReqPaymentVal
+   - name: Dep
+     entity: ENT_Department
+   - name: year
+     entity: ENT_Year
+utterances:
+   - what is the [Fees](Fees) for the [year](first year) of [Dep](software engineering)?
+   - How much are the [Fees] for the [year] of [Dep]?
+   - i want to know the [Fees] of [year] for [Dep]
+   - tell me the [Fees] of [year] for [Dep]
+
+
+
+
+
+#OfficeHours Entity
+---
+type: entity
+name: ENT_DoctorBioVal
+automatically_extensible: no
+values:
+- [biography,profile,life story,life history]
+
+#ReqPaymentVal entity
+---
+type: entity
+name: ENT_ReqPaymentVal
+automatically_extensible: no
+values:
+- [fees, money, price, payment, tuition fees, bill]
+
+# Year entity
+---
+type: entity
+name: ENT_Year
+values:
+- [first year, 1st year, year one, year 1]
+- [second year , 2nd year , year second , year 2]
+- [third year , 3rd year , year third , year 3]
+- [fourth year , 4th year , year fourth , year 4 , senior, final year]
+
+# Time entity
+---
+type: entity
+name: ENT_Semester
+automatically_extensible: no
+values:
+- [ first semester, 1st semester , semester one, semester 1]
+- [ second semester, 2nd semester , semester two, semester 2]
+- [ third semester, 3rd semester , semester three, semester 3]
+- [ fourth semester, 4th semester , semester four, semester 4]
+- [ fifth semester, 5th semester , semester five, semester 5]
+- [ sixth semester, 6th semester , semester six, semester 6]
+- [ seventh semester, 7th semester , semester seven, semester 7]
+- [ eighth semester, 8th semester , semester eight, semester 8]
+
+#gradingSchema Entity
+---
+type: entity
+name: ENT_GradingSchemaVal
+automatically_extensible: no
+values:
+- grading schema
+
+#Result Entity
+---
+type: entity
+name: ENT_ResultVal
+automatically_extensible: no
+values:
+- [result,grades]
+
+#OfficeHours Entity
+---
+type: entity
+name: ENT_OfficeHoursVal
+automatically_extensible: no
+values:
+- [office hours, available, free]
+
+#Office Entity
+---
+type: entity
+name: ENT_OfficeVal
+automatically_extensible: no
+values:
+- [personal office,office, place, work place]
+
+# Doctor_Name entity
+---
+type: entity
+name: ENT_doctor_name
+automatically_extensible: yes
+values:
+- [safwat hamad]
+
+# Department entity
+---
+type: entity
+name: ENT_Department
+automatically_extensible: no
+values:
+- [software engineering, swe, sw]
+- [bioinformatics, bio]
+- [general, mainstream]
+- [scientific computing, sc]
+- [information system, is]
+- [computer science, cs]
+- [artificial Intelligence, ai]
+- cyber security

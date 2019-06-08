@@ -1,0 +1,36 @@
+
+---
+type: intent
+name: Age
+utterances:
+   - what's your age
+   - I'd like to know your age
+   - how old are you
+   - tell me your age
+
+---
+type: intent
+name: Annoying
+utterances:
+  - you are annoying
+  - you are irritating
+  - you're incredibly annoying
+  - I find you annoying
+
+---
+type: intent
+name: Acquaintance
+utterances:
+  - tell me some stuff about you
+  - why are you here
+  - who are you
+  - introduce yourself
+
+---
+type: intent
+name: Welcome
+utterances:
+  - sure welcome
+  - that's my pleasure
+  - you are welcome
+  - anything you want

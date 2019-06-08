@@ -4,7 +4,7 @@ import random
 from click._compat import raw_input
 from flask import Flask, request
 from pymessenger.bot import Bot
-from NLU_Engine import NLU
+# from NLU_Engine import NLU
 
 app = Flask(__name__)
 ACCESS_TOKEN = 'EAAGGGCVi2rcBALuP2tFhFnyWbu10RF7CHWpFwfvfyeZC1hfzpR1N9ZAShQqgeqDPZCGFk1o3POMCnDtVXaByFJlV46K1TT1saiuGel70cpeqPTbpIF033DQgSPoozDA9zjZARZAJ9CbUfXrXFeHIKZCmroNKfAtFDCcKZBmcGh0UwZDZD'

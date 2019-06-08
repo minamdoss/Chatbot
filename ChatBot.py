@@ -16,26 +16,26 @@ def Translate_Text (question):
     return translated.text , translated.src
     # print("Pronunciation : " + str(translated.pronunciation))
 
-if __name__ == "__main__":
-
-    flag = 1
-    nlu = NLU()
-    nlu.EngineMode("Train")
-    while (flag):
-        question = raw_input("User : ")
-
-        #To End Chat
-        if(question == 'q'):
-            flag = 0
-            break
-
-        # print(eda(question))
-
-        # nlu.setQuery(Translate_Text(question))
-        nlu.setQuery((question))
-
-        nlu.answer()
-
+# if __name__ == "__main__":
+#
+#     flag = 1
+#     nlu = NLU()
+#     nlu.EngineMode("Train")
+#     while (flag):
+#         question = raw_input("User : ")
+#
+#         #To End Chat
+#         if(question == 'q'):
+#             flag = 0
+#             break
+#
+#         # print(eda(question))
+#
+#         # nlu.setQuery(Translate_Text(question))
+#         nlu.setQuery((question))
+#
+#         nlu.answer()
+#
 
 
 

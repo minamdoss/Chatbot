@@ -35,6 +35,7 @@ class NLU:
         self.__dataset=''
         self.__nluSlots=''
         self.language=''
+        self.User_id=''
 
     def EngineMode(self, mode):
         """
@@ -66,8 +67,8 @@ class NLU:
 
 
     def setQuery(self, query):
-        # self._query , self.language = query
-        self._query = query
+        self._query , self.User_id = query
+        # self._query = query
         self.__excute()
 
 
@@ -128,11 +129,13 @@ class NLU:
         if self.checkIntent():
             if str(self.CheckJsonEntities()).__contains__("Has No Entities"):
                 print("Chatbot : Get Answer From Json Answers")
-                # app.receive_message("Chatbot : Get Answer From Json Answers")
+                app.send_message(self.User_id,"Get Answer From Json Answers")
             else:
                 self.return_original()
         else:
             print('ChatBot : not available due to intent')
+            app.send_message(self.User_id,'not available due to intent')
+
 
     def checkSlots(self):
         self.__nluSlots = self._getSlots()
